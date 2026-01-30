@@ -1,0 +1,362 @@
+[
+    {
+        "time_since_last_trade_minutes": 120,
+        "last_trade_pnl": 50,
+        "last_trade_pnl_pct": 2.5,
+        "note_sentiment": 0.7,
+        "note_quality": 0.9,
+        "note_length": 55,
+        "target": "NORMAL"
+    },
+    {
+        "time_since_last_trade_minutes": 90,
+        "last_trade_pnl": 35,
+        "last_trade_pnl_pct": 1.8,
+        "note_sentiment": 0.6,
+        "note_quality": 0.85,
+        "note_length": 48,
+        "target": "NORMAL"
+    },
+    {
+        "time_since_last_trade_minutes": 5,
+        "last_trade_pnl": -60,
+        "last_trade_pnl_pct": -3.2,
+        "note_sentiment": -0.4,
+        "note_quality": 0.25,
+        "note_length": 52,
+        "target": "FOMO"
+    },
+    {
+        "time_since_last_trade_minutes": 3,
+        "last_trade_pnl": -80,
+        "last_trade_pnl_pct": -4.5,
+        "note_sentiment": -0.5,
+        "note_quality": 0.2,
+        "note_length": 55,
+        "target": "FOMO"
+    },
+    {
+        "time_since_last_trade_minutes": 2,
+        "last_trade_pnl": -100,
+        "last_trade_pnl_pct": -5.8,
+        "note_sentiment": -0.6,
+        "note_quality": 0.15,
+        "note_length": 48,
+        "target": "REVENGE_TRADING"
+    },
+    {
+        "time_since_last_trade_minutes": 1,
+        "last_trade_pnl": -120,
+        "last_trade_pnl_pct": -6.2,
+        "note_sentiment": -0.7,
+        "note_quality": 0.1,
+        "note_length": 62,
+        "target": "TILT"
+    },
+    {
+        "time_since_last_trade_minutes": 180,
+        "last_trade_pnl": 80,
+        "last_trade_pnl_pct": 3.1,
+        "note_sentiment": 0.65,
+        "note_quality": 0.88,
+        "note_length": 60,
+        "target": "NORMAL"
+    },
+    {
+        "time_since_last_trade_minutes": 240,
+        "last_trade_pnl": 70,
+        "last_trade_pnl_pct": 2.8,
+        "note_sentiment": 0.55,
+        "note_quality": 0.82,
+        "note_length": 45,
+        "target": "NORMAL"
+    },
+    {
+        "time_since_last_trade_minutes": 30,
+        "last_trade_pnl": -20,
+        "last_trade_pnl_pct": -1.2,
+        "note_sentiment": -0.3,
+        "note_quality": 0.4,
+        "note_length": 42,
+        "target": "NORMAL"
+    },
+    {
+        "time_since_last_trade_minutes": 8,
+        "last_trade_pnl": -50,
+        "last_trade_pnl_pct": -2.5,
+        "note_sentiment": -0.4,
+        "note_quality": 0.3,
+        "note_length": 38,
+        "target": "FOMO"
+    },
+    {
+        "time_since_last_trade_minutes": 300,
+        "last_trade_pnl": 100,
+        "last_trade_pnl_pct": 4.2,
+        "note_sentiment": 0.7,
+        "note_quality": 0.92,
+        "note_length": 50,
+        "target": "NORMAL"
+    },
+    {
+        "time_since_last_trade_minutes": 4,
+        "last_trade_pnl": -75,
+        "last_trade_pnl_pct": -3.8,
+        "note_sentiment": -0.5,
+        "note_quality": 0.18,
+        "note_length": 40,
+        "target": "FOMO"
+    },
+    {
+        "time_since_last_trade_minutes": 1,
+        "last_trade_pnl": -150,
+        "last_trade_pnl_pct": -7.5,
+        "note_sentiment": -0.65,
+        "note_quality": 0.12,
+        "note_length": 42,
+        "target": "TILT"
+    },
+    {
+        "time_since_last_trade_minutes": 360,
+        "last_trade_pnl": 120,
+        "last_trade_pnl_pct": 5.5,
+        "note_sentiment": 0.6,
+        "note_quality": 0.8,
+        "note_length": 50,
+        "target": "NORMAL"
+    },
+    {
+        "time_since_last_trade_minutes": 180,
+        "last_trade_pnl": 45,
+        "last_trade_pnl_pct": 2.2,
+        "note_sentiment": 0.75,
+        "note_quality": 0.95,
+        "note_length": 48,
+        "target": "NORMAL"
+    },
+    {
+        "time_since_last_trade_minutes": 10,
+        "last_trade_pnl": -80,
+        "last_trade_pnl_pct": -4.1,
+        "note_sentiment": -0.45,
+        "note_quality": 0.22,
+        "note_length": 52,
+        "target": "FOMO"
+    },
+    {
+        "time_since_last_trade_minutes": 240,
+        "last_trade_pnl": 40,
+        "last_trade_pnl_pct": 1.9,
+        "note_sentiment": 0.55,
+        "note_quality": 0.85,
+        "note_length": 45,
+        "target": "NORMAL"
+    },
+    {
+        "time_since_last_trade_minutes": 2,
+        "last_trade_pnl": -180,
+        "last_trade_pnl_pct": -8.3,
+        "note_sentiment": -0.7,
+        "note_quality": 0.08,
+        "note_length": 48,
+        "target": "TILT"
+    },
+    {
+        "time_since_last_trade_minutes": 150,
+        "last_trade_pnl": 30,
+        "last_trade_pnl_pct": 1.5,
+        "note_sentiment": 0.8,
+        "note_quality": 0.93,
+        "note_length": 58,
+        "target": "NORMAL"
+    },
+    {
+        "time_since_last_trade_minutes": 60,
+        "last_trade_pnl": -35,
+        "last_trade_pnl_pct": -1.8,
+        "note_sentiment": -0.3,
+        "note_quality": 0.35,
+        "note_length": 55,
+        "target": "NORMAL"
+    },
+    {
+        "time_since_last_trade_minutes": 200,
+        "last_trade_pnl": 70,
+        "last_trade_pnl_pct": 3.0,
+        "note_sentiment": 0.7,
+        "note_quality": 0.9,
+        "note_length": 40,
+        "target": "NORMAL"
+    },
+    {
+        "time_since_last_trade_minutes": 6,
+        "last_trade_pnl": -100,
+        "last_trade_pnl_pct": -5.2,
+        "note_sentiment": -0.5,
+        "note_quality": 0.2,
+        "note_length": 42,
+        "target": "FOMO"
+    },
+    {
+        "time_since_last_trade_minutes": 280,
+        "last_trade_pnl": 60,
+        "last_trade_pnl_pct": 2.6,
+        "note_sentiment": 0.6,
+        "note_quality": 0.82,
+        "note_length": 45,
+        "target": "NORMAL"
+    },
+    {
+        "time_since_last_trade_minutes": 3,
+        "last_trade_pnl": -90,
+        "last_trade_pnl_pct": -4.8,
+        "note_sentiment": -0.6,
+        "note_quality": 0.15,
+        "note_length": 48,
+        "target": "REVENGE_TRADING"
+    },
+    {
+        "time_since_last_trade_minutes": 220,
+        "last_trade_pnl": 85,
+        "last_trade_pnl_pct": 3.5,
+        "note_sentiment": 0.75,
+        "note_quality": 0.94,
+        "note_length": 56,
+        "target": "NORMAL"
+    },
+    {
+        "time_since_last_trade_minutes": 1,
+        "last_trade_pnl": -70,
+        "last_trade_pnl_pct": -3.5,
+        "note_sentiment": -0.55,
+        "note_quality": 0.18,
+        "note_length": 40,
+        "target": "REVENGE_TRADING"
+    },
+    {
+        "time_since_last_trade_minutes": 7,
+        "last_trade_pnl": -55,
+        "last_trade_pnl_pct": -2.8,
+        "note_sentiment": -0.4,
+        "note_quality": 0.25,
+        "note_length": 38,
+        "target": "FOMO"
+    },
+    {
+        "time_since_last_trade_minutes": 260,
+        "last_trade_pnl": 50,
+        "last_trade_pnl_pct": 2.1,
+        "note_sentiment": 0.65,
+        "note_quality": 0.87,
+        "note_length": 52,
+        "target": "NORMAL"
+    },
+    {
+        "time_since_last_trade_minutes": 45,
+        "last_trade_pnl": -30,
+        "last_trade_pnl_pct": -1.5,
+        "note_sentiment": -0.35,
+        "note_quality": 0.4,
+        "note_length": 40,
+        "target": "NORMAL"
+    },
+    {
+        "time_since_last_trade_minutes": 190,
+        "last_trade_pnl": 45,
+        "last_trade_pnl_pct": 2.0,
+        "note_sentiment": 0.7,
+        "note_quality": 0.91,
+        "note_length": 55,
+        "target": "NORMAL"
+    },
+    {
+        "time_since_last_trade_minutes": 1,
+        "last_trade_pnl": -250,
+        "last_trade_pnl_pct": -15.0,
+        "note_sentiment": -0.65,
+        "note_quality": 0.1,
+        "note_length": 38,
+        "target": "TILT"
+    },
+    {
+        "time_since_last_trade_minutes": 240,
+        "last_trade_pnl": 55,
+        "last_trade_pnl_pct": 2.4,
+        "note_sentiment": 0.6,
+        "note_quality": 0.85,
+        "note_length": 48,
+        "target": "NORMAL"
+    },
+    {
+        "time_since_last_trade_minutes": 300,
+        "last_trade_pnl": -15,
+        "last_trade_pnl_pct": -0.8,
+        "note_sentiment": 0.5,
+        "note_quality": 0.75,
+        "note_length": 42,
+        "target": "NORMAL"
+    },
+    {
+        "time_since_last_trade_minutes": 1,
+        "last_trade_pnl": -130,
+        "last_trade_pnl_pct": -6.5,
+        "note_sentiment": -0.6,
+        "note_quality": 0.1,
+        "note_length": 50,
+        "target": "TILT"
+    },
+    {
+        "time_since_last_trade_minutes": 320,
+        "last_trade_pnl": 95,
+        "last_trade_pnl_pct": 4.0,
+        "note_sentiment": 0.75,
+        "note_quality": 0.92,
+        "note_length": 52,
+        "target": "NORMAL"
+    },
+    {
+        "time_since_last_trade_minutes": 75,
+        "last_trade_pnl": -45,
+        "last_trade_pnl_pct": -2.2,
+        "note_sentiment": -0.3,
+        "note_quality": 0.3,
+        "note_length": 40,
+        "target": "NORMAL"
+    },
+    {
+        "time_since_last_trade_minutes": 270,
+        "last_trade_pnl": 75,
+        "last_trade_pnl_pct": 3.2,
+        "note_sentiment": 0.8,
+        "note_quality": 0.95,
+        "note_length": 50,
+        "target": "NORMAL"
+    },
+    {
+        "time_since_last_trade_minutes": 5,
+        "last_trade_pnl": -60,
+        "last_trade_pnl_pct": -3.0,
+        "note_sentiment": -0.45,
+        "note_quality": 0.22,
+        "note_length": 42,
+        "target": "FOMO"
+    },
+    {
+        "time_since_last_trade_minutes": 1,
+        "last_trade_pnl": -320,
+        "last_trade_pnl_pct": -20.0,
+        "note_sentiment": -0.7,
+        "note_quality": 0.05,
+        "note_length": 35,
+        "target": "TILT"
+    },
+    {
+        "time_since_last_trade_minutes": 2,
+        "last_trade_pnl": -110,
+        "last_trade_pnl_pct": -5.5,
+        "note_sentiment": -0.55,
+        "note_quality": 0.12,
+        "note_length": 45,
+        "target": "REVENGE_TRADING"
+    }
+]

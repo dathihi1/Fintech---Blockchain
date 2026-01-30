@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Trading Journal - System Test</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            padding: 40px;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .test-card {
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s;
+        }
+        
+        .test-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+        
+        .test-card h3 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .test-status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .status-pending {
+            background: #ffd700;
+            color: #333;
+        }
+        
+        .status-success {
+            background: #4caf50;
+            color: white;
+        }
+        
+        .status-error {
+            background: #f44336;
+            color: white;
+        }
+        
+        .test-result {
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            max-height: 150px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #5568d3;
+        }
+        
+        .btn-success {
+            background: #4caf50;
+            color: white;
+        }
+        
+        .btn-success:hover {
+            background: #45a049;
+        }
+        
+        .summary {
+            background: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            border-radius: 4px;
+        }
+        
+        .summary h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .summary-stats {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .stat {
+            font-size: 18px;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .stat-value {
+            font-weight: bold;
+            font-size: 24px;
+        }
+        
+        .success { color: #4caf50; }
+        .error { color: #f44336; }
+        .info { color: #2196f3; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Smart Trading Journal - System Test</h1>
+        <p class="subtitle">Real-time connectivity and API testing</p>
+        
+        <div class="button-group">
+            <button class="btn-primary" onclick="runAllTests()">Run All Tests</button>
+            <button class="btn-success" onclick="window.location.href='http://localhost:3000'">Go to App</button>
+        </div>
+        
+        <div class="test-grid">
+            <div class="test-card" id="test-backend-health">
+                <h3>Backend Health</h3>
+                <span class="test-status status-pending">PENDING</span>
+                <p style="color: #666; font-size: 12px; margin-bottom: 10px;">
+                    GET http://localhost:8000/health
+                </p>
+                <div class="test-result">Not tested yet</div>
+            </div>
+            
+            <div class="test-card" id="test-backend-api">
+                <h3>Backend API</h3>
+                <span class="test-status status-pending">PENDING</span>
+                <p style="color: #666; font-size: 12px; margin-bottom: 10px;">
+                    GET http://localhost:8000/api/nlp/keywords
+                </p>
+                <div class="test-result">Not tested yet</div>
+            </div>
+            
+            <div class="test-card" id="test-frontend-proxy">
+                <h3>Frontend Proxy</h3>
+                <span class="test-status status-pending">PENDING</span>
+                <p style="color: #666; font-size: 12px; margin-bottom: 10px;">
+                    GET /api/nlp/keywords (via Vite proxy)
+                </p>
+                <div class="test-result">Not tested yet</div>
+            </div>
+            
+            <div class="test-card" id="test-nlp-analyze">
+                <h3>NLP Analysis</h3>
+                <span class="test-status status-pending">PENDING</span>
+                <p style="color: #666; font-size: 12px; margin-bottom: 10px;">
+                    POST /api/nlp/analyze
+                </p>
+                <div class="test-result">Not tested yet</div>
+            </div>
+        </div>
+        
+        <div class="summary">
+            <h2>Summary</h2>
+            <div class="summary-stats">
+                <div class="stat">
+                    <div class="stat-label">Total</div>
+                    <div class="stat-value info" id="total-tests">0</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-label">Passed</div>
+                    <div class="stat-value success" id="passed-tests">0</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-label">Failed</div>
+                    <div class="stat-value error" id="failed-tests">0</div>
+                </div>
+            </div>
+            <div id="summary-message" style="color: #666;">Click "Run All Tests" to start testing</div>
+        </div>
+    </div>
+    
+    <script>
+        let testResults = {
+            total: 0,
+            passed: 0,
+            failed: 0
+        };
+        
+        function updateStatus(testId, status, message) {
+            const card = document.getElementById(testId);
+            const statusEl = card.querySelector('.test-status');
+            const resultEl = card.querySelector('.test-result');
+            
+            statusEl.className = 'test-status';
+            if (status === 'success') {
+                statusEl.classList.add('status-success');
+                statusEl.textContent = '✓ SUCCESS';
+                testResults.passed++;
+            } else if (status === 'error') {
+                statusEl.classList.add('status-error');
+                statusEl.textContent = '✗ FAILED';
+                testResults.failed++;
+            }
+            
+            resultEl.textContent = message;
+            testResults.total++;
+            updateSummary();
+        }
+        
+        function updateSummary() {
+            document.getElementById('total-tests').textContent = testResults.total;
+            document.getElementById('passed-tests').textContent = testResults.passed;
+            document.getElementById('failed-tests').textContent = testResults.failed;
+            
+            const messageEl = document.getElementById('summary-message');
+            if (testResults.total === 0) {
+                messageEl.textContent = 'No tests run yet';
+                messageEl.style.color = '#666';
+            } else if (testResults.failed === 0) {
+                messageEl.textContent = '✓ All tests passed! System is healthy and ready.';
+                messageEl.style.color = '#4caf50';
+                messageEl.style.fontWeight = 'bold';
+            } else {
+                messageEl.textContent = `⚠ ${testResults.failed} test(s) failed. Check the results above.`;
+                messageEl.style.color = '#f44336';
+                messageEl.style.fontWeight = 'bold';
+            }
+        }
+        
+        async function testBackendHealth() {
+            try {
+                const response = await fetch('http://localhost:8000/health');
+                const data = await response.json();
+                
+                if (response.ok && data.status === 'healthy') {
+                    updateStatus('test-backend-health', 'success', 
+                        `Status: ${data.status}\nDemo Mode: ${data.demo_mode}\nNLP Model: ${data.nlp_model}`);
+                } else {
+                    updateStatus('test-backend-health', 'error', 
+                        `Status: ${response.status}\n${JSON.stringify(data, null, 2)}`);
+                }
+            } catch (error) {
+                updateStatus('test-backend-health', 'error', 
+                    `Error: ${error.message}\n\nBackend is not running or CORS is blocking the request.`);
+            }
+        }
+        
+        async function testBackendAPI() {
+            try {
+                const response = await fetch('http://localhost:8000/api/nlp/keywords');
+                const data = await response.json();
+                
+                if (response.ok && data.vi && data.en) {
+                    updateStatus('test-backend-api', 'success', 
+                        `Received keywords for ${Object.keys(data).length} languages\n` +
+                        `Vietnamese emotions: ${Object.keys(data.vi).length}\n` +
+                        `English emotions: ${Object.keys(data.en).length}`);
+                } else {
+                    updateStatus('test-backend-api', 'error', 
+                        `Status: ${response.status}\n${JSON.stringify(data, null, 2).substring(0, 200)}...`);
+                }
+            } catch (error) {
+                updateStatus('test-backend-api', 'error', 
+                    `Error: ${error.message}\n\nCannot connect to backend API.`);
+            }
+        }
+        
+        async function testFrontendProxy() {
+            try {
+                const response = await fetch('/api/nlp/keywords');
+                const data = await response.json();
+                
+                if (response.ok && data.vi && data.en) {
+                    updateStatus('test-frontend-proxy', 'success', 
+                        `✓ Proxy working correctly!\n` +
+                        `Frontend successfully communicates with backend.\n` +
+                        `Received data: ${Object.keys(data).length} languages`);
+                } else {
+                    updateStatus('test-frontend-proxy', 'error', 
+                        `Status: ${response.status}\nProxy configuration may be incorrect.`);
+                }
+            } catch (error) {
+                updateStatus('test-frontend-proxy', 'error', 
+                    `Error: ${error.message}\n\nFrontend cannot proxy requests to backend.`);
+            }
+        }
+        
+        async function testNLPAnalyze() {
+            try {
+                const response = await fetch('/api/nlp/analyze', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        text: 'This is a test trade note. I am confident about this setup.'
+                    })
+                });
+                const data = await response.json();
+                
+                if (response.ok && data.sentiment !== undefined) {
+                    updateStatus('test-nlp-analyze', 'success', 
+                        `✓ NLP Analysis working!\n` +
+                        `Sentiment: ${data.sentiment.toFixed(3)}\n` +
+                        `Emotions detected: ${Object.keys(data.emotions || {}).length}\n` +
+                        `Quality score: ${data.quality_score ? data.quality_score.toFixed(3) : 'N/A'}`);
+                } else {
+                    updateStatus('test-nlp-analyze', 'error', 
+                        `Status: ${response.status}\n${JSON.stringify(data, null, 2).substring(0, 200)}...`);
+                }
+            } catch (error) {
+                updateStatus('test-nlp-analyze', 'error', 
+                    `Error: ${error.message}\n\nNLP analysis endpoint not working.`);
+            }
+        }
+        
+        async function runAllTests() {
+            // Reset
+            testResults = { total: 0, passed: 0, failed: 0 };
+            
+            console.log('Starting system tests...');
+            
+            await testBackendHealth();
+            await new Promise(resolve => setTimeout(resolve, 300));
+            
+            await testBackendAPI();
+            await new Promise(resolve => setTimeout(resolve, 300));
+            
+            await testFrontendProxy();
+            await new Promise(resolve => setTimeout(resolve, 300));
+            
+            await testNLPAnalyze();
+            
+            console.log('All tests completed!', testResults);
+        }
+        
+        // Auto-run on load
+        window.addEventListener('load', () => {
+            setTimeout(runAllTests, 500);
+        });
+    </script>
+</body>
+</html>

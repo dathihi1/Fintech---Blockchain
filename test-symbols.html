@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Symbols API</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        .success { color: green; }
+        .error { color: red; }
+        pre { background: #f5f5f5; padding: 10px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h1>Testing Symbols API</h1>
+    <button onclick="testAPI()">Test API</button>
+    <div id="result"></div>
+
+    <script>
+        async function testAPI() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = '<p>Testing...</p>';
+            
+            try {
+                // Test 1: Popular symbols
+                const popularResponse = await fetch('/api/symbols/popular?limit=5');
+                const popularData = await popularResponse.json();
+                
+                let html = '<h2 class="success">✓ Popular Symbols API Working</h2>';
+                html += '<pre>' + JSON.stringify(popularData, null, 2) + '</pre>';
+                
+                // Test 2: Search
+                const searchResponse = await fetch('/api/symbols/search?q=BTC&limit=3');
+                const searchData = await searchResponse.json();
+                
+                html += '<h2 class="success">✓ Search API Working</h2>';
+                html += '<pre>' + JSON.stringify(searchData, null, 2) + '</pre>';
+                
+                // Test 3: Check format
+                html += '<h2>Data Format Check</h2>';
+                if (popularData && popularData.length > 0) {
+                    const first = popularData[0];
+                    html += '<p class="success">✓ Array format correct</p>';
+                    html += '<p>First item has keys: ' + Object.keys(first).join(', ') + '</p>';
+                    
+                    if (first.symbol && first.display) {
+                        html += '<p class="success">✓ Required fields present</p>';
+                    } else {
+                        html += '<p class="error">✗ Missing required fields</p>';
+                    }
+                } else {
+                    html += '<p class="error">✗ Data is not an array or is empty</p>';
+                }
+                
+                resultDiv.innerHTML = html;
+                
+            } catch (error) {
+                resultDiv.innerHTML = '<h2 class="error">✗ Error</h2><pre>' + error.message + '</pre>';
+            }
+        }
+        
+        // Auto-run on load
+        window.onload = () => testAPI();
+    </script>
+</body>
+</html>
